@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,19 +6,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     {% block styles %}
     <link rel="stylesheet" href="{% static 'css/basephotos.css' %}">
     {% endblock %}
     <!-- cdn links -->
-    <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.1/css/uikit.min.css" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css" />
 
 
     {% if title %}
@@ -31,20 +31,15 @@
 
     {% include "navbar.html" %}
 
-    {% block content %} <h1 class='text-center'>News for {{date|date:"l d-F Y"}}</h1> {%endblock%}
-
     {% block content %}
 
-    <h1>Photos on {{date|date:"1 d:F Y"</h1>
+    <h1>Photos on {{date|date:"1 d:F Y"}}</h1>
 
     {%endblock%}
-    
 
 
-     <!-- scripts -->
-     <!-- UIkit JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.1/js/uikit.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.1/js/uikit-icons.min.js"></script>
+
+    <!-- scripts -->
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
@@ -56,5 +51,9 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
 </body>
+
 </html>
