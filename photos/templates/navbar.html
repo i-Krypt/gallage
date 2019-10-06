@@ -1,27 +1,34 @@
 <div class="uk-position-relative">
-        <img src="images/light.jpg" alt="">
+        
+        <div class="uk-child-width-1-2@s uk-light" uk-grid>
+                <div>
+                    <div class="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url(https://i.ibb.co/vdrSNjN/Be-Funky-photo-25.jpg); height: 670px; width: 1400px;">
+                        <p class="uk-h4">The Gallage</p>
+                    </div>
+                </div>
+        </div>
         <div class="uk-position-top">
             <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
                 <div class="uk-navbar-left">
                     <ul class="uk-navbar-nav">
-                        <li class="uk-active"><a href="#">Active</a></li>
-                        <li><a href="#offcanvas-slide" class="uk-button uk-button-default" uk-toggle>Open</a>
+                        
+                        <li><a href="#offcanvas-push" uk-toggle="target: #offcanvas-push">
+                                <button class="ui black basic button">Gallage</button>
+                        </a>
 
-                            <div id="offcanvas-slide" uk-offcanvas>
+                        <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true">
                                 <div class="uk-offcanvas-bar">
                             
-                                    <ul class="uk-nav uk-nav-default">
-                                        <li class="uk-active"><a href="#">Active</a></li>
-                                        <li><a href="#">Item</a></li>
-                                        <li class="uk-nav-header">Header</li>
-                                        <li><a href="#">Item</a></li>
-                                        <li><a href="#">Item</a></li>
-                                        <li class="uk-nav-divider"></li>
-                                        <li><a href="#">Item</a></li>
-                                    </ul>
+                                    <button class="uk-offcanvas-close" type="button" uk-close></button>
+                            
+                                    <h3>Title</h3>
+                            
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             
                                 </div>
-                            </div></li>
+                            </div>
+                            
+                        </li>
                         <li>
                         
                           
