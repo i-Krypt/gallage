@@ -18,3 +18,12 @@ class tags(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Uploads(models.Model):
+    title = models.CharField(max_length =60)
+    post = models.TextField()
+    uploader = models.ForeignKey(Uploader)
+    tags = models.ManyToManyField(tags)
+    pub_date = models.DateTimeField(auto_now_add=True)
+
