@@ -1,21 +1,14 @@
+from django.shortcuts import render,redirect
 import datetime as dt
 from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse('Welcome to the Gallage.')
+    return render(request, 'index.html')
 
 def todays_photos(request):
     date = dt.date.today()
-    html = f'''
-        <html>
-            <body>
-                <h1> {date.day}-{date.month}-{date.year}</h1>
-            </body>
-        </html>
-            '''
-    
-    return HttpResponse(html)
+    return render(request, 'all-photos/todays-photos.html', {"date": date,})
 
 def convert_dates(dates):
 
