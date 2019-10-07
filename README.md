@@ -10,7 +10,7 @@ This is a Django application for personal gallery that allows a user to upload i
 ### Screenshots 
 ###### Home page
  
-<https://i.ibb.co/Pt3LG89/Screenshot-from-2019-10-08-00-43-45.png>
+<img src="https://i.ibb.co/PWGswJK/Screenshot-from-2019-10-08-00-43-45.png">
  
 ### User Story  
   
