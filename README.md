@@ -14,7 +14,7 @@ This is a Django application for personal gallery that allows a user to upload i
  
 ### User Story  
   
-* Uaer gets to view different photos
+* User gets to view different photos
 * Click a single image to expand it and view the details of the photo  
 * Search for different categories of the images 
 * Copy a link to the photo to share with my friends.  
@@ -58,3 +58,6 @@ Open the application on your browser on the port given.
  
 ### Contact Information   
 reach me on my email: vamay505@gmail.com
+
+* [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)](https://github.com/i-Krypt/gallage.git/blob/master/LICENSE)  
+* Copyright (c) 2019 **Sam Nujoma**
