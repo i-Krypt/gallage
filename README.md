@@ -12,7 +12,7 @@ This is a Django application for personal gallery that allows a user to upload i
  
 <https://i.ibb.co/Pt3LG89/Screenshot-from-2019-10-08-00-43-45.png>
  
-## User Story  
+### User Story  
   
 * Uaer gets to view different photos
 * Click a single image to expand it and view the details of the photo  
@@ -22,7 +22,7 @@ This is a Django application for personal gallery that allows a user to upload i
   
 
   
-## Setup and Installation  
+### Setup and Installation  
 Get started ...
   
 ##### Clone the repository:  
@@ -51,10 +51,10 @@ cd gallage and pip install -r requirements.txt
 ```
 Open the application on your browser on the port given.  
    
-## Technology used  
+### Technology used  
   
 * [Python3.6](https://www.python.org/)  
 * [Django 1.11](https://docs.djangoproject.com/en/2.2/)  
  
-## Contact Information   
+### Contact Information   
 reach me on my email: vamay505@gmail.com
