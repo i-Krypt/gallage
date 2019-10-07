@@ -1,13 +1,13 @@
-# gallage
+# The Gallage
 A Django gallery application,users can search images by category and also view image locations in the side nav. 
 The user can also view the image category on toggle and image details.
-## Author  
+### Author  
 Sam Nujoma
   
-# Description  
+### Description  
 This is a Django application for personal gallery that allows a user to upload images for other to see and be able to to share by coping the image link.
     
-## Screenshots 
+### Screenshots 
 ###### Home page
  
 <https://i.ibb.co/Pt3LG89/Screenshot-from-2019-10-08-00-43-45.png>
