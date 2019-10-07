@@ -2,4 +2,23 @@
 
 {% block content %}
 {{block.super}}
-{% endblock %}
+<!-- looping through photos -->
+{% for photos_item in photos %}
+<div class="container">
+<br>
+<h4 class="ui horizontal divider header" id="proffer">
+        <i class="binoculars icon"></i>
+        Gallery
+      </h4>
+      
+<div class="uk-child-width-1-3@m" uk-grid uk-lightbox="animation: slide">
+    <div>
+        <a class="uk-inline" href="{{photos_item.image.url}}" data-caption="Caption 1">
+            <img src="{{photos_item.image.url}}" alt="">
+        </a>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}  

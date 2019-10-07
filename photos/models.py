@@ -1,35 +1,47 @@
 from django.db import models
+import datetime as dt
 
 # Create your models here.
-class Uploader(models.Model):
-    first_name = models.CharField(max_length =30)
-    last_name = models.CharField(max_length =30)
-    email = models.EmailField()
-    phone_number = models.CharField(max_length = 10,blank = True)
-
+class Location(models.Model):
+    location = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.first_name
-    class Meta:
-        ordering = ['first_name']
+        return self.location
 
-    def save_uploader(self):
+
+    def save_location(self):
         self.save()
 
+    def delete_location(self):
+        self.delete()
 
-class tags(models.Model):
-    name = models.CharField(max_length =30)
+class Category(models.Model):
+    category = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.name
+        return self.category
 
+    def save_category(self):
+        self.save()
 
-class Uploads(models.Model):
-    title = models.CharField(max_length =60)
-    post = models.TextField()
-    uploader = models.ForeignKey(Uploader)
-    tags = models.ManyToManyField(tags)
-    pub_date = models.DateTimeField(auto_now_add=True)
+    @classmethod
+    def delete_category(cls,category):
+        cls.objects.filter(category=category).delete()
 
+class Image(models.Model):
+    title =models.CharField(max_length =60)
+    post_date = models.DateTimeField(auto_now_add=True)
+    location= models.ForeignKey(Location)
+    category= models.ForeignKey(Category)
+    image = models.ImageField(upload_to ='images/' ,default='DEFAULT VALUE')
 
+    def __str__(self):
+        return self.title
 
+    def save_image(self):
+        self.save()
+
+    @classmethod    
+    def all_images(cls):
+        images = cls.objects.all()
+        return images

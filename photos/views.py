@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 import datetime as dt
 from django.http import HttpResponse
+from .models import Image
 
 # Create your views here.
 def index(request):
@@ -8,7 +9,8 @@ def index(request):
 
 def todays_photos(request):
     date = dt.date.today()
-    return render(request, 'all-photos/todays-photos.html', {"date": date,})
+    photos = Image.objects.all()
+    return render(request, 'all-photos/todays-photos.html', {"date": date, "photos":photos})
 
 def convert_dates(dates):
 

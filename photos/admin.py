@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import Uploader,Uploads,tags
+from .models import Location,Category,Image
 
 # Register your models here.
 class UploadsAdmin(admin.ModelAdmin):
-    filter_horizontal =('tags',)
+    list_display =('image',)
 
-admin.site.register(Uploader)
-admin.site.register(Uploads)
-admin.site.register(tags)
+admin.site.register(Location)
+admin.site.register(Category)
+admin.site.register(Image, UploadsAdmin)
