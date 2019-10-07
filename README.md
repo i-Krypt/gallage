@@ -47,7 +47,7 @@ cd gallage and pip install -r requirements.txt
 ``` 
 ##### Testing the application  
  ```bash 
- python manage.py test 
+ python manage.py test photos
 ```
 Open the application on your browser on the port given.  
    
