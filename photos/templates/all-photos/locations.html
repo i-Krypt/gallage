@@ -1,0 +1,21 @@
+{% extends 'all-photos/base.html'%}
+
+{%block content%}
+<div class="container">
+
+        {% for location in locations %}
+        <h4>{{location.location}}</h4>
+        <div class="card-columns">
+        
+          {% for photo in photos %}
+            {% if photo.location.location == location.location %}
+            <div class="card" style="border:none">
+              <img src="{{photo.image.url}}" width="355px" alt="">
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <hr>
+        {% endfor %}
+</div>
+{% endblock %}

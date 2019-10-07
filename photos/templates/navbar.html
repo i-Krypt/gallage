@@ -2,16 +2,14 @@
         
         <div class="uk-child-width-1-2@s uk-light" uk-grid>
                 <div>
-                    <div class="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url(https://i.ibb.co/vdrSNjN/Be-Funky-photo-25.jpg); height: 500px; width: 1400px;">        
-                        <!-- <p class="uk-h4">The Gallage</p>  -->
-                        <br> 
-                        <div class="ui fluid category search">
-                                <div class="ui icon input">
-                                  <input class="prompt" type="text" placeholder="Search gallage...">
-                                  <i class="search icon"></i>
-                                </div>
-                                <div class="results"></div>
-                              </div>
+                    <div class="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url(https://i.ibb.co/vdrSNjN/Be-Funky-photo-25.jpg); height: 450px; width: 1400px;">        
+            
+                        <div class="uk-margin uk-animation-toggle" tabindex="0" style="margin-left: -2%">
+                                <form class="uk-search uk-search-default uk-animation-slide-top" method='get' action='{% url 'search_results' %}'>
+                                    <span class="uk-search-icon-flip" uk-search-icon></span>
+                                    <input class="uk-search-input" type="search" placeholder="Search..." name="search_term">
+                                </form>
+                            </div>
                     </div>
                    
                 </div>
@@ -21,8 +19,8 @@
                 <div class="uk-navbar-left">
                     <ul class="uk-navbar-nav">
                         
-                        <li><a href="#offcanvas-push" uk-toggle="target: #offcanvas-push">
-                                <button class="ui black basic button">Gallage</button>
+                        <li><a href="#offcanvas-push" uk-toggle="target: #offcanvas-push" uk-animation-toggle tabindex="0" style="margin-left: 60%">
+                                <button class="ui black basic button uk-animation-slide-left">Gallage</button>
                         </a>
 
                         <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true">
@@ -30,10 +28,23 @@
                             
                                     <button class="uk-offcanvas-close" type="button" uk-close></button>
                             
-                                    <h3>Title</h3>
+                                    <h3>Gallage</h3>
                             
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            
+                                    <ul class="uk-nav uk-nav-default">
+                                            
+                                            <li class="uk-nav-header">Browse locations</li>
+                                            <li><a href="{% url 'location'%}">location</a></li>
+                                            <li class="uk-nav-divider"></li>
+
+                                            <li class="uk-active"><a href="#">Search by category</a></li>
+                                            <li><a href="#">Architecture</a></li>
+                                            <li><a href="#">Food</a></li>
+                                            <li><a href="#">Accessories</a></li>
+                                        
+
+                                          
+                                        </ul>
+                                
                                 </div>
                             </div>
                             
